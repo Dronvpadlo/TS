@@ -11,7 +11,7 @@ function areasq(a: number, b: number): void{
 areasq(5, 8);
 
 /*- створити функцію яка обчислює та повертає площу кола з радіусом r*/
-function areacircle(p: number, r: number):void{
+function areacircle(p: number, r: number): void{
     if (p > 0 && r > 0) {
         let result2: number = p * r * r;
         document.write(`circle area: ${result2} if radius have ${r}</br>`);
@@ -24,7 +24,7 @@ areacircle(3.14, 5);
 
 
 /*- створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r*/
-function areacylind(p: number, r: number, h: number):void{
+function areacylind(p: number, r: number, h: number): void{
     if (p > 0 && r > 0 && h > 0) {
         let result3: number = 2 * p * r * h;
         document.write(`cylindr area: ${result3} if radius = ${r} and height = ${h}</br>`);
@@ -80,7 +80,7 @@ li2('item2');
 
 /*- створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список*/
 document.write(`<ul>`)
-function loop2(array2:(string | number | boolean)[]): void{
+function loop2(array2: (string | number | boolean)[]): void{
     for (const item of array2) {
         document.write(`<li>${item}</li> `);
     }
@@ -94,7 +94,7 @@ document.write(`</ul>`);
 
 
 /*- створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.*/
-function loop3(users: any): void {
+function loop3(users): void {
     for (const user of users) {
         document.write(`<div class="user">
         <div class="id">id: ${user.id}</div>

@@ -3,24 +3,24 @@
 
 - Створити масив, наповнити його 10 елементами будь-якого типу, вивести кожен елемент в консоль*/
 
-let array1 : {} = [1, 5, 10, 15, 20, true, false, 'string', 'hello', 'dream'];
+let array1: (string | number | boolean)[];
 console.log(array1);
 
 
 
 /*- Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre.*/
 
-let book1 : {title:string, pageCount:number, genre:string} = {
+let book1: {title:string, pageCount:number, genre:string} = {
     title: 'Red Dragon',
     pageCount: 398,
     genre: 'detective',
 }
-let book2 : {title:string, pageCount:number, genre:string} ={
+let book2: {title:string, pageCount:number, genre:string} ={
     title: 'Process',
     pageCount: 299,
     genre: 'classic',
 }
-let book3 : {title:string, pageCount:number, genre:string} ={
+let book3: {title:string, pageCount:number, genre:string} ={
     title: 'Blaze',
     pageCount: 238,
     genre: 'horror',
@@ -31,7 +31,7 @@ console.log(book1, book2, book3);
 
 /*- Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.*/
 
-let book4 : {title:string, pageCount:number, genre:string, authors:any} = {
+let book4: {title:string, pageCount:number, genre:string, authors: any} = {
     title: 'Den Kameradan',
     pageCount: 468,
     genre: 'classic',
@@ -39,7 +39,7 @@ let book4 : {title:string, pageCount:number, genre:string, authors:any} = {
         {name: 'Erich Maria Remarque', age: 72}
     ]
 }
-let book5 : {title:string, pageCount:number, genre:string, authors:any} ={
+let book5: {title:string, pageCount:number, genre:string, authors:any} ={
     title: 'Misery',
     pageCount: 272,
     genre: 'horror',
@@ -47,7 +47,7 @@ let book5 : {title:string, pageCount:number, genre:string, authors:any} ={
         {name: 'Stephen King', age: 76}
     ]
 }
-let book6 : {title:string, pageCount:number, genre:string, authors:any} ={
+let book6: {title:string, pageCount:number, genre:string, authors:any} ={
     title: 'Martin Iden',
     pageCount: 498,
     genre: 'classic',
@@ -61,7 +61,7 @@ console.log(book4, book5, book6);
 
 /*- Створити масив з 10 об'єктами які описують сутніть "користувач". Поля: name, username,password. Вивести в консоль пароль кожного користувача*/
 
-let users : {name:string, username:string, password:string}[] =[
+let users: {name:string, username:string, password:string}[] =[
     {name: 'Arthur' ,username:'Ar2r' ,password:'artrdr'},
     {name: 'Irving' ,username:'Irwin' ,password:'irving31'},
     {name: 'Joseph' ,username:'JoeJoe' ,password:'sepht09'},
@@ -88,7 +88,7 @@ console.log('password10: ' + users[9].password)
 
 /*- описати масив, в якому буде зберігатись інформація про температуру вранці, вдень і ввечері за термін в 7 днів. Як зробити цей масив - вам потрібно подумати. Нормальних варіантів опису - 2. Варіант, коли в вас буде одновимірний масив з 21 значенням вичключаємо одразу*/
 
-let temperature:{day:string, morning:number, noon:number, evening:number}[] = [
+let temperature: {day:string, morning:number, noon:number, evening:number}[] = [
     {day: 'In Monday temperature:', morning: 7, noon: 14, evening: 10},
     {day: 'In Tuesday temperature:', morning: 9, noon: 17, evening: 13},
     {day: 'In Wednesday temperature:', morning: 10, noon: 17, evening: 13},
@@ -105,7 +105,7 @@ console.log(temperature);
     - Є змінна х, якій ви надаєте довільне числове значення.
     Якщо змінна x не дорівнює нулю, виведіть 'Вірно', інакше виведіть 'Невірно'. Перевірте  скрипт при a, що дорівнює 1, 0, -3*/
 
-let x : number = 3;
+let x: number = 3;
 if (x > 0){
     console.log('true')
 }
@@ -139,7 +139,7 @@ else {
 
 /*- У змінній day дано якесь число від 1 до 31. Потрібно визначити, у яку половину(декаду) місяця потрапляє це число (у першу, другу чи третю).*/
 
-let day:number = 2;
+let day: number = 2;
 if (day < 11){
     console.log('first decade')
 }

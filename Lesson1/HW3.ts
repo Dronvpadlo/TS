@@ -1,19 +1,19 @@
 /* - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині*/
-for (let i : number = 0; i < 10; i++) {
+for (let i: number = 0; i < 10; i++) {
     document.write('<div id="task1">for</div>');
 }
 
 
 
 /*- За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині*/
-for (let i : number = 0; i < 10; i++) {
+for (let i: number = 0; i < 10; i++) {
     document.write(`<div id="task2"> for ${i+1}</div>`);
 }
 
 
 
 /*- За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом всередині.*/
-let a : number = 0;
+let a: number = 0;
 while( a < 20){
     document.write('<h1>while</h1>');
     a++
@@ -22,7 +22,7 @@ while( a < 20){
 
 
 /*- За допомогою циклу while вивести в документ 20 блоків h1 c довільним текстом і індексом всередині.*/
-let b : number = 0;
+let b: number = 0;
 while( b < 20){
     document.write(`<h1>while ${b +1 }</h1>`);
     b++
@@ -32,7 +32,7 @@ while( b < 20){
 побудувати структуру по шаблону
 Масив:*/
 
-let listOfItems:any = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+let listOfItems: string[] = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 for (const item of listOfItems){
     document.write(`<ul><li>${item}</li></ul>`);
 }
@@ -95,7 +95,7 @@ for (const product of products){
 
 --------------------
     є масив*/
-let users:{name:string, age:number, status:boolean}[] = [
+let users: {name:string, age:number, status:boolean}[] = [
     {name: 'vasya', age: 31, status: false},
     {name: 'petya', age: 30, status: true},
     {name: 'kolya', age: 29, status: true},
