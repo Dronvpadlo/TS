@@ -30,8 +30,11 @@ console.log(book1, book2, book3);
 
 
 /*- Створити 3 об'єкти які описують книги. Поля об'єкту : title ,pageCount, genre, authors. Поле "автори" - являється  масивом. Кожен автор має поля name та age.*/
-
-let book4: {title:string, pageCount:number, genre:string, authors: any} = {
+interface IAuthor{
+    name: string;
+    age: number;
+}
+let book4: {title:string, pageCount:number, genre:string, authors: IAuthor[]} = {
     title: 'Den Kameradan',
     pageCount: 468,
     genre: 'classic',
@@ -39,7 +42,7 @@ let book4: {title:string, pageCount:number, genre:string, authors: any} = {
         {name: 'Erich Maria Remarque', age: 72}
     ]
 }
-let book5: {title:string, pageCount:number, genre:string, authors:any} ={
+let book5: {title:string, pageCount:number, genre:string, authors: IAuthor[]} ={
     title: 'Misery',
     pageCount: 272,
     genre: 'horror',
@@ -47,7 +50,7 @@ let book5: {title:string, pageCount:number, genre:string, authors:any} ={
         {name: 'Stephen King', age: 76}
     ]
 }
-let book6: {title:string, pageCount:number, genre:string, authors:any} ={
+let book6: {title:string, pageCount:number, genre:string, authors: IAuthor[]} ={
     title: 'Martin Iden',
     pageCount: 498,
     genre: 'classic',
