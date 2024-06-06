@@ -71,7 +71,7 @@ sortNums(nums,'descending') // [21,11,3]*/
 
 console.log('створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction:');
 let nums: number[] = [11, 21 ,3];
-const sortNums = (nums, direction: string): void =>{
+const sortNums = (nums: number[], direction: string): void =>{
     if (direction ==='ascending'){
         nums.sort((index1, index2) => index1 - index2)}
     else if (direction ==='descending'){
@@ -173,7 +173,7 @@ console.log(cards);
 
 //- знайти піковий туз
 console.log('знайти піковий туз');
-let spadeAce: {cardSuit: string, value: string, color: string}[] = cards.filter(cardOfArr => {
+cards.filter(cardOfArr => {
     if (cardOfArr.cardSuit ==='spade' && cardOfArr.value === 'ace'){
         console.log(cardOfArr);
     }
@@ -182,7 +182,7 @@ console.log('_________________________________________________________');
 
 //- всі шістки
 console.log('всі шістки');
-let sixthCards: {cardSuit: string, value: string, color: string}[] = cards.filter(cardOfArr => {
+cards.filter(cardOfArr => {
     if (cardOfArr.value ==='6'){
         console.log(cardOfArr);
     }
@@ -191,7 +191,7 @@ console.log('_________________________________________________________');
 
 //- всі червоні карти
 console.log('всі червоні карти');
-let redCards: {cardSuit: string, value: string, color: string}[] = cards.filter(cardOfArr => {
+cards.filter(cardOfArr => {
     if (cardOfArr.color ==='red'){
         console.log(cardOfArr);
     }
@@ -201,7 +201,7 @@ console.log('_________________________________________________________');
 
 //- всі буби
 console.log('всі буби');
-let diamondsCards: {cardSuit: string, value: string, color: string}[] = cards.filter(cardOfArr => {
+cards.filter(cardOfArr => {
     if (cardOfArr.cardSuit ==='diamond'){
         console.log(cardOfArr);
     }
@@ -211,7 +211,7 @@ console.log('_________________________________________________________');
 
 //- всі трефи від 9 та більше
 console.log('всі трефи від 9 та більше');
-let moreThanEightClubs: {cardSuit: string, value: string, color: string}[] = cards.filter(cardOfArr => {
+cards.filter(cardOfArr => {
     if (cardOfArr.cardSuit ==='clubs' && cardOfArr.value !=='6' && cardOfArr.value !=='7' && cardOfArr.value !=='8'){
         console.log(cardOfArr);
     }
@@ -232,7 +232,7 @@ console.log('_________________________________________________________');
 
 //  10.  Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об'єкт
 console.log('Взяти описану колоду карт, та за допомоги reduce упакувати всі карти по "мастях" в об\'єкт');
-const callback = function (accumulator, card): void {
+const callback = function (accumulator: any, card:{cardSuit:string}): void {
     if (card.cardSuit === 'spade'){
         accumulator[0].push(card);
     }
@@ -304,7 +304,7 @@ let coursesArray: {title: string, monthDuration: number, hourDuration: number, m
 
 //--написати пошук всіх об'єктів, в який в modules є sass
 console.log('написати пошук всіх об\'єктів, в який в modules є sass');
-let sassFinder:{title: string, monthDuration: number, hourDuration: number, modules: string[]}[] = coursesArray.filter(module => {
+coursesArray.filter(module => {
     module.modules.filter(direction => {
         if (direction === 'sass'){
             console.log(module);
@@ -314,7 +314,7 @@ let sassFinder:{title: string, monthDuration: number, hourDuration: number, modu
 console.log('_________________________________________________________');
 //--написати пошук всіх об'єктів, в який в modules є docker
 console.log('написати пошук всіх об\'єктів, в який в modules є docker');
-let dockerFinder:{title: string, monthDuration: number, hourDuration: number, modules: string[]}[] = coursesArray.filter(module => {
+coursesArray.filter(module => {
     module.modules.filter(direction => {
         if (direction === 'docker'){
             console.log(module);
